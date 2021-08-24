@@ -1,0 +1,30 @@
+h1 {
+    font-size: 50px;
+    color: rgb(255, 0, 234);
+
+}
+
+.discription {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(253, 86, 25);
+    text-decoration: underline;
+
+}
+
+.discription_em {
+    text-decoration: line-through;
+}
+
+p {
+    color: yellowgreen;
+    font-family: fantasy;
+}
+
+#tugmacha {
+    border-style: outset;
+    background-color: rgba(250, 92, 64, 0.836);
+}
+.tugmacha{
+     border-style: ridge;
+     background-color: rgba(0, 0, 0, 0.836);
+}
