@@ -1,39 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
-    <title>Selectors</title>
+    <!-- Требуется указать title -->
+    <title>TZ-6 by Sarvinoz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./selectors.css">
+    <link rel="stylesheet" href="css/icons.css">
 </head>
+
 <body>
-     <h1>
-         Hello
-     </h1>
-     <h2>
-         Good
-     </h2>
-     <h1>
-         Why
-     </h1>
-     <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae cum labore nobis suscipit quo ipsa, error itaque, ea pariatur nulla. Totam, vitae. Molestiae sunt aliquid aspernatur, adipisci qui cum?
-     </p>
-     <p class="discription">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse soluta molestiae repudiandae aliquid corrupti ut similique consectetur distinctio, explicabo debitis ab itaque, ducimus possimus accusantium quis, aut quo fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, totam, libero dicta praesentium voluptas rerum eveniet autem tempora sed pariatur saepe ipsum? Repudiandae, sunt at laboriosam dolorem ullam sequi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus dolores ad, sequi voluptate odit quis tempora nisi tempore debitis commodi!
-     </p>
-     <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae cum labore nobis suscipit quo ipsa, error
-         itaque, ea pariatur nulla. Totam, vitae. Molestiae sunt aliquid aspernatur, adipisci qui cum?
-     </p>
-     <p class="discription_em discription">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta quam iusto vel officiis voluptatibus ab? Dolore consequatur, qui repellendus corporis facere tenetur vitae cupiditate rerum! Repellendus nihil debitis voluptas! Eaque asperiores architecto dignissimos impedit sed similique nostrum maxime doloremque iste beatae repellat recusandae iusto quibusdam facere aperiam quo ducimus, corrupti dolores temporibus aspernatur illo dolorum? Dolorum voluptate cum ipsam impedit doloribus harum accusantium, tenetur amet, possimus quisquam, totam debitis incidunt provident eligendi ad deserunt saepe dolor blanditiis nostrum reprehenderit?
-     </p>
-     <button class="tugmacha" id="tugmacha">
-         Valijonova <br> Sarvinoz <br> Shaxbozovna
-     </button>
+    <!-- Селектор типа -->
+    <div>
+        <h2>Hello</h2>
+        <h2>H 2</h2>
+    </div>
+
+    <!-- Селектор класс -->
+    <div>
+        <p class="description">
+            This text is styled using a class selector
+        </p>
+        <blockquote class="description">
+            There can be several classes on the page with the same class
+        </blockquote>
+    </div>
+
+    <!-- Несколько классов на элементе -->
+    <div>
+        <p class="description emphasized-description">
+            This text is styled using a class selector
+        </p>
+        <p class="description emphasized-description">
+            There can be several classes on the page with the same class
+        </p>
+    </div>
+
+    <!-- Селектор id -->
+    <div>
+        <p id="thought">
+            Some thought: This text is styled using a selector like id
+        </p>
+        <!-- <p id="thought">
+            Two identical id's on the page will be an error
+        </p>
+        <p id="mistake idea">
+           Two id's on an element will also be an error, it just won't work
+        </p> -->
+    </div>
+
+    <!-- Смешивание классов и id -->
+    <div>
+        <p id="idea" class="description">
+            It is possible to mix id and classes
+        </p>
+        <p id="mistake" class="description">
+            When the id and class styles intersect, id will have a higher priority (regardless of the order
+            declarations in css) - this text is red, not blue as for description
+        </p>
+    </div>
+
+    <!--Правила именования-->
+    <!-- @see https://google.github.io/styleguide/htmlcssguide.html#CSS_Style_Rules -->
+
+    <!-- 
+        Используйте либо универсальные названия, либо отражающие суть элемента,
+        избегая презентационных правил
+    -->
+    <!-- Используйте настолько короткие именования классов, насколько возможно-->
+    <div>
+        <p>
+            Explore the examples at the following links and highlight erroneous and correct names:
+            <a href=""></a>
+            <a href=""></a>
+        </p>
+    </div>
+
+    <!-- Разделяйте слова в называниях классов с помощью тире-->
+
+    <!-- Не называйте опираясь на презентационные свойства элемента-->
+    <!-- 
+        <style>
+            /** вот так не рекомендуется  - но часто встречается */
+            .red {
+                background: red;
+            }
+        </style>
+        <p class="red"></p>
+    -->
+
+    <!-- Найдите ошибку в строке 35-->
+    <!-- @see https://google.github.io/styleguide/htmlcssguide.html#CSS_Style_Rules-->
+
+
+    <!--НЕ смешивайте селекторы типа и селекторы классов-->
+    <!-- 
+        <style>
+            /** вот так не рекомендуется */
+            p.some {
+                ........
+            }
+        </style>
+        <p class="some"></p>
+    -->
+
+
+    <!-- Пример стилевых модификаторов, в данном случае error-->
+    <!-- @see 23 in main.css-->
+    <input type="text" class="form-input" />
+    <input type="text" class="form-input error" />
+
+    <!-- Универсальный селектор -->
+    <!-- @see and uncomment 34 in main.css -->
+
+    <!-- Селектор потомков-->
+    <ul class="menu">
+        <li>
+            <a href="#">Menu link 1 </a>
+        </li>
+        <li>
+            <a href="#">Menu link 2</a>
+        </li>
+    </ul>
+
+    <!-- Уровень вложенности не имеет значения-->
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu link 1 DIV</a>
+            </li>
+            <li>
+                <a href="#">Menu link 2 DIV</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>
+            <a href="#">Просто ссылка в списке</a>
+        </li>
+        <li>
+            <a href="#">Просто ссылка в списке2</a>
+        </li>
+    </ul>
+
+    <!-- Дочерний селектор  сработает только если menu2 класс перенести в ul -->
+    <div class="menu2">
+        <p>
+            menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2menu2
+        </p>
+
+        <div>
+            <p>
+                menu2_div_p menu2_div_p menu2_div_p menu2_div_p menu2_div_p menu2_div_p menu2_div_p menu2_div_p
+                menu2_div_p menu2_div_p
+            </p>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum id in tempora ad. Ea consequatur asperiores,
+            commodi distinctio cumque quibusdam ab autem architecto esse saepe repudiandae quos id earum quas?
+        </p>
+    </div>
+
+    <!-- Сестринский селектор -->
+    <div>
+        <p class="description">
+            This text is styled using a class selector
+        </p>
+
+        <!-- @see 52 of css-->
+        <h3>And before this text there is a heading</h3>
+        <p class="description">
+            SarvinozSarvinozSarvinozSarvinozSarvinozSarvinozSarvinozSarvinoz
+        </p>
+
+        <h3>А перед этим текстом тоже есть заголовок</h3>
+        <div>
+            <p class="description">
+                Этот текст будет как обычный class=description
+            </p>
+        </div>
+    </div>
+
+    <!-- Сестринский селектор -->
+    <div>
+        <p class="description">
+            Этот текст стилизован с использованием селектора типа класс
+        </p>
+
+        <!-- @see 52 of css-->
+        <p class="description">
+            Сестринский, но h3 + .description не сработает, потому что сверху
+        </p>
+        <h3>А перед этим текстом есть заголовок</h3>
+        <p class="description">
+            Сестринский h3 + .description
+        </p>
+        <p class="description">
+            этот текст будет как обычный class=description, потому что он не сестринский для h3
+        </p>
+
+        <h3>А перед этим текстом тоже есть заголовок</h3>
+        <div>
+            <p class="description">
+                Этот текст будет как обычный class=description
+            </p>
+        </div>
+    </div>
+
+    <!-- Общий селектор смежных элементов ~-->
+    <div>
+        <h2>And before this text there is a heading</h2>
+        <p class="description">
+            We're all orange
+        </p>
+        <p class="description">
+            We're all orange
+        </p>
+    </div>
+
+    <!-- Группирующий селектор @see 73 main.css -->
+
+    <!-- Селекторы атрибутов -->
+    <div>
+        <h3>Отзывы наших клиентов</h3>
+        <a href="#" data-customer="roga_i_kopita ostap">Рога и копыта Остап</a>
+        <a href="#" data-customer="ostap i_komanda ">Остап и команда</a>
+        <a href="#" data-customer="antilopa">Антилопа Гну</a>
+    </div>
+
+    <input type="text">
+    <input type="button" value="Кнопка">
+    <input class="button" type="textarea">
+    <input class="button" data-foo="bazz">
+
+    
+
+
 
 
 </body>
+
 </html>
