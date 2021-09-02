@@ -1,0 +1,145 @@
+/*Fonts*/
+@font-face {
+    font-family: 'IBM-Plex-sans';
+    src: url(/Fonts/IBMPlexSans-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'IBM-Plex-sans';
+    src: url(/Fonts/IBMPlexSans-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'IBM-Plex-sans';
+    src: url(/Fonts/IBMPlexSans-SemiBold.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'IBM-Plex-sans';
+    src: url(/Fonts/IBMPlexSans-Thin.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+
+@font-face {
+    font-family: 'IBM-Plex-sans';
+    src: url(/Fonts/IBMPlexSans-Light.ttf);
+    font-style: normal;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'IBM-Plex-sans';
+}
+
+/*Fonts end*/
+
+/*Global properties*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* max-width: 1180px;
+    margin: 0 auto;
+    box-sizing: border-box; */
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*Global ends*/
+
+/*Header*/
+.header {
+    background: url(/images/back.png) no-repeat center/cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 99%);
+    width: 100%;
+    height: 668px;
+}
+
+.innopolis_logo {
+    padding: 10px 10px 10px 10px;
+    height: 39px;
+    width: 159px;
+    margin-top: 41px;
+    margin-left: 105px;
+}
+
+.nav__box {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+    font-size: 12px;
+}
+
+.menu_1 {
+    list-style: none;
+    display: flex;
+    margin-top: -55px;
+    margin-left: 303px;
+}
+
+.menu_2 {
+    list-style: none;
+    display: flex;
+    margin-left: 305px;
+    margin-top: 9px;
+
+}
+
+h1 {
+    font-size: 68px;
+    color: white;
+    margin-top: 143px;
+    font-weight: 100;
+    margin-left: 233px;
+
+}
+
+h3 {
+    font-size: 41px;
+    color: white;
+    margin-left: 321px;
+    font-weight: 400;
+    margin-top: 34px;
+}
+.link:hover {
+    color: rgb(255, 0, 119);
+    text-decoration: underline;
+    transition: 1s;
+}
+.Contact_call{
+    border: 1px solid white;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 35px;
+}
+.Contact_call:hover{
+    background-color: yellowgreen;
+    color: white;
+}
+..Contact_call>img{
+    padding: 5px 3px;
+}
+
+/*Header ends*/

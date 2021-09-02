@@ -55,9 +55,9 @@ ul#summer-drinks li {
     color: red !important;
 }
 
-p {
+/* p {
     color: rgb(255, 0, 0);
-}
+} */
 
 #a {
     color: rgb(0, 255, 191);
@@ -74,9 +74,35 @@ p {
 .d_2 {
     color: rgb(255, 0, 212);
 }
-.f_1{
+
+.f_1 {
     color: palegreen;
 }
-#f{
+
+#f {
     color: tomato;
+}
+
+/* #pagewrapper p {
+    color: darkseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pagewrapper{
+    font-size: 30px;
+} */
+.content {
+    font-size: 15px;
+}
+
+#pagewrapper>.content {
+    color: white;
+}
+
+#pagewrapper .content {
+    color: black;
+}
+
+div :not(.content) {
+    color: rgb(0, 255, 234);
 }
