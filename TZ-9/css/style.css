@@ -228,6 +228,8 @@ li a {
     padding: 114px 0 0 140px;
 }
 
+.choose_film h2 {}
+
 /*Table*/
 .table {
     border-collapse: separate;
@@ -362,6 +364,17 @@ tbody tr:last-child td.check {
     font-size: 48px;
     margin-left: -4px;
     margin-top: -26px;
+}
+
+.main_h2 p {
+    font-size: 11px;
+    text-align: end;
+    width: 548px;
+    height: 173px;
+    margin-left: -122px;
+    margin-top: -3px;
+    Font: IBM Plex Sans;
+    font-weight: 400;
 }
 
 .podarok {
@@ -950,5 +963,10 @@ form {
     line-height: 26px;
 }
 
-/* Обратная связь  end*/
+.copyright {
+    margin-right: 611px;
+    color: white;
+    margin: 42px 0 0px 114px;
+}
 
+/* Обратная связь  end*/
